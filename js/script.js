@@ -13,7 +13,7 @@ function showPage(list, page) {
   // loop over the length of the `list` parameter
   for (let i = 0; i < list.length; i++) {
     if (i >= startIndex && i < endIndex) {
-      studentItem = +`
+      studentItem += `
     <li class="student-item cf">
     <div class="student-details">
       <img class="avatar" src=${list[i].picture.medium} alt="Profile Picture">
