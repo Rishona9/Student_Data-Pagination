@@ -3,8 +3,8 @@
 
 function showPage(list, page) {
   // create two variables which will represent the index for the first and last student on the page
-  const startIndex = page * 8 - 8;
-  const endIndex = page * 8;
+  const startIndex = page * 9 - 9;
+  const endIndex = page * 9;
   // select the element with a class of `student-list` and assign it to a variable
   const studentList = document.querySelector(".student-list");
   // set the innerHTML property of the variable you just created to an empty string
