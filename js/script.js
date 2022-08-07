@@ -11,7 +11,7 @@ function showPage(list, page) {
   studentList.innerHTML = "";
   let studentItem = "";
   // loop over the length of the `list` parameter
-  for (let i = 0; i < studentList.length; i++) {
+  for (let i = 0; i < list.length; i++) {
     if (i >= startIndex && i < endIndex) {
       studentItem = +`
     <li class="student-item cf">
