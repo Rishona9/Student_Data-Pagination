@@ -69,3 +69,26 @@ const searchForm = () => {
   searchHeader.appendChild(searchLabel);
 };
 searchForm();
+
+const searchBarInput = document.getElementById("search");
+let newStudentList = [];
+
+searchBarInput.addEventListener("keyup", (e) => {
+  const filterInput = e.target.value.toLowerCase();
+  const filteredStudent = data.filter((student) => {
+    return (
+      student.name.first.toLowerCase().includes(filterInput) ||
+      student.name.last.toLowerCase().includes(filterInput)
+    );
+  });
+  newStudentList = filteredStudent;
+  showPage(newStudentList, 1);
+  addPagination(newStudentList);
+
+  const button = document.querySelectorAll("button");
+  button.className = "active";
+  if (newStudentList.length === 0) {
+    const zeroResults = document.querySelector(".student-list");
+    zeroResults.innerHTML = '<li class="no-results">No results found.</li>';
+  }
+});
