@@ -1,4 +1,4 @@
-//Function creates and inserts/appends the elements needed to display a "page" of nine students
+//Function creates and inserts/appends the elements needed to display a page of nine students
 
 function showPage(list, page) {
   const startIndex = page * 9 - 9;
@@ -27,7 +27,7 @@ function showPage(list, page) {
 }
 
 //Function creates and inserts/appends the elements needed for the pagination buttons
-//*/
+
 function addPagination(list) {
   const numOfPages = Math.ceil(list.length / 9);
   const linkList = document.querySelector(".link-list");
@@ -58,6 +58,8 @@ function addPagination(list) {
 showPage(data, 1);
 addPagination(data);
 
+//Function creates form for user to search for name of a student
+
 const searchForm = () => {
   const searchHeader = document.querySelector(".header");
   const searchLabel = document.createElement("label");
@@ -69,6 +71,8 @@ const searchForm = () => {
   searchHeader.appendChild(searchLabel);
 };
 searchForm();
+
+//Filters data on page to search by student name or partial name
 
 const searchBarInput = document.getElementById("search");
 let newStudentList = [];
