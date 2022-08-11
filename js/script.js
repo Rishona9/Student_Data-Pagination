@@ -57,3 +57,15 @@ function addPagination(list) {
 
 showPage(data, 1);
 addPagination(data);
+
+const searchForm = () => {
+  const searchHeader = document.querySelector(".header");
+  const searchLabel = document.createElement("label");
+  searchLabel.innerHTML = `<label for="search" class="student-search">
+  <span>Search by name</span>
+  <input id="search" placeholder="Search by name...">
+  <button type="button"><img src="img/icn-search.svg" alt="Search icon"></button>
+</label>`;
+  searchHeader.appendChild(searchLabel);
+};
+searchForm();
