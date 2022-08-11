@@ -50,7 +50,7 @@ function addPagination(list) {
     const buttonClicked = e.target;
     if (buttonClicked.tagName === "BUTTON") {
       const activeClassButton = document.querySelector(".active");
-      activeClassButton[0].className = "";
+      activeClassButton.className = "";
       buttonClicked.className = "active";
       showPage(list, buttonClicked.textContent);
     }
