@@ -1,4 +1,4 @@
-//This function will create and insert/append the elements needed to display a "page" of nine students
+//Function creates and inserts/appends the elements needed to display a "page" of nine students
 
 function showPage(list, page) {
   const startIndex = page * 9 - 9;
@@ -25,10 +25,8 @@ function showPage(list, page) {
   }
   studentList.insertAdjacentHTML("beforeend", studentItem);
 }
-showPage(data, 1);
 
-//Create the `addPagination` function
-//This function will create and insert/append the elements needed for the pagination buttons
+//Function creates and inserts/appends the elements needed for the pagination buttons
 //*/
 function addPagination(list) {
   const numOfPages = Math.ceil(list.length / 9);
